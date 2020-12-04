@@ -1,3 +1,3 @@
 # mini_program_datetodatalist
 
-![截图](./test.jpg)
+![截图](./test.png)
