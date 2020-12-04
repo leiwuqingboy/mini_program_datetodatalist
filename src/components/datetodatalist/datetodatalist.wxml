@@ -1,0 +1,36 @@
+<block wx:if="{{title == ''}}">
+    <view></view>
+</block>
+<view class="dateView" style="{{'background-color: ' + layoutBgColor + ';'}}" wx:else>
+    <view class="titleView">
+        <view class="previousImage" bindtap="previousMonthClick">
+            <image src="{{previousMonthIcon}}"></image>
+        </view>
+        <view class="title" style="{{'color: ' + titleColor + ';'}}">{{title}}</view>
+        <view class="nextImage" bindtap="nextMonthClick">
+            <image src="{{nextMonthIcon}}"></image>
+        </view>
+    </view>
+    <scroll-view class="weekList">
+        <view class="weekItem" wx:for="{{weakList}}" wx:for-item="item" wx:for-index="_anonIdx2"><view class="weekTitle" style="{{'color: ' + weekTextColor + ';'}}">{{item}}</view></view>
+    </scroll-view>
+    <scroll-view class="dayList">
+        <view class="dayItem" wx:for="{{dayList}}" wx:for-item="item" wx:for-index="index"  >
+            <view class="dayContent" bindtap="dayClick" id="{{index}}">
+                <block wx:if="{{item.isSelected}}">
+                    <view class="borderView" style="{{'border-color: ' + selectBorderColor + ';'}}"></view>
+                </block>
+                <text class="dayText" style="{{'color: ' + item.dayColor + ';'}}">{{item.day}}</text>
+                <view class="seasonList">
+                    <block wx:if="{{mapList}}">
+                        <block wx:if="{{mapList[item.datestr]}}">
+                            <block wx:if="{{index < 2}}" wx:for="{{mapList[item.datestr]}}" wx:for-item="object" wx:for-index="index">
+                                <view class="seasonItem" style="{{'color: '+object.textColor+';background-color: '+object.bgColor+';'}}">{{object.time}}</view>
+                            </block>
+                        </block>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

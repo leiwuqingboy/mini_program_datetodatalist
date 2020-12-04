@@ -1,0 +1,120 @@
+.dateView {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 0;
+  margin-bottom: 0;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  padding-bottom: 25px;
+}
+.titleView {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: initial;
+  position: relative;
+}
+.previousImage {
+  height: 100%;
+  width: 14%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1%;
+}
+.previousImage > Image {
+  width: 20rpx;
+  height: 35rpx;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 33rpx;
+  flex: 1;
+}
+.nextImage {
+  height: 100%;
+  width: 14%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1%;
+}
+.nextImage > Image {
+  width: 20rpx;
+  height: 35rpx;
+}
+.weekList {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  margin-left: 0.5%;
+}
+.weekItem {
+  display: inline-table;
+  width: 14.1%;
+  height: 31rpx;
+  position: relative;
+  margin: 0;
+}
+.weekTitle {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+}
+.dayList {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  margin-top: 25rpx;
+  margin-left: 0.5%;
+}
+.dayItem {
+  display: inline-table;
+  width: 14.1%;
+  height: 120rpx;
+  position: relative;
+  margin: 0;
+}
+.dayContent {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.borderView {
+  border-radius: 8rpx;
+  border-width: 1rpx;
+  border-style: solid;
+  position: absolute;
+  left: 4rpx;
+  right: 4rpx;
+  top: 0;
+  bottom: 0;
+}
+.dayText {
+  font-size: 26rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seasonList {
+  flex: 1;
+}
+.seasonItem {
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+  margin-bottom: 5rpx;
+  border-radius: 8rpx;
+  font-size: 21rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
